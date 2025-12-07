@@ -38,6 +38,14 @@
       letter-spacing: 0.04em;
     }
 
+    .nav-link {
+      color: rgba(255, 255, 255, 0.86) !important;
+    }
+
+    .nav-link:hover {
+      color: #fff !important;
+    }
+
     /* HERO */
     .hero-section {
       min-height: 80vh;
@@ -224,18 +232,17 @@
   <!-- Contenedor raíz de React -->
   <div id="root"></div>
 
-  <!-- React + ReactDOM + Babel (para JSX en este mismo archivo) -->
+  <!-- React + ReactDOM + Babel -->
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <!-- Bootstrap JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Código React -->
   <script type="text/babel">
+    /* NAVBAR */
     function Navbar() {
       return (
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -262,13 +269,8 @@
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#beneficios">
-                    Beneficios
-                  </a>
-                </li>
-                <li className="nav-item">
                   <a className="nav-link" href="#contacto">
-                    Contacto / Reserva
+                    Contacto
                   </a>
                 </li>
               </ul>
@@ -278,6 +280,7 @@
       );
     }
 
+    /* HERO */
     function HeroSection() {
       return (
         <section id="inicio" className="hero-section">
@@ -296,12 +299,18 @@
                   </span>
                 </h1>
                 <p className="hero-subtitle mt-3 mb-4">
-                  Piedras calientes, masajes descontracturantes y relajantes,
-                  pensados para liberar tensión, reducir el estrés y
-                  desconectar de la rutina sin salir del hotel.
+                  Masajes certificados para relajar, sanar y renovar tu energía:
+                  descontracturantes, relajantes, piedras calientes y más,
+                  en la comodidad de tu alojamiento en la montaña.
                 </p>
                 <div className="d-flex flex-wrap gap-2">
-                  <a href="#contacto" className="btn btn-anka-primary">
+                  {/* BOTÓN DE RESERVA → SIMPLYBOOK */}
+                  <a
+                    href="https://lodgeelmorado.simplybook.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-anka-primary"
+                  >
                     Reserva tu masaje
                   </a>
                   <a href="#servicios" className="btn btn-anka-outline">
@@ -311,7 +320,7 @@
                 <div className="hero-pill d-inline-flex align-items-center gap-2 mt-4">
                   <span>💆</span>
                   <span>
-                    Atención por masajistas certificadas · Horarios flexibles
+                    Masajistas certificadas · Horarios flexibles según disponibilidad del lodge
                   </span>
                 </div>
               </div>
@@ -345,22 +354,9 @@
                     </li>
                   </ul>
                   <p className="small text-muted mb-2">
-                    Próximamente podrás reservar directamente desde el código
-                    QR del hotel con SimplyBook.me.
+                    Gestiona tu reserva en línea desde el botón “Reserva tu masaje”
+                    o escaneando el código QR disponible en el lodge.
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div>
-                      <div className="fw-semibold">Agenda flexible</div>
-                      <div className="small text-muted">
-                        Mañana · Tarde · Noche
-                      </div>
-                    </div>
-                    <div className="text-end">
-                      <div className="small text-muted">Desde</div>
-                      <div className="fs-5 fw-bold">$XX.XXX CLP</div>
-                      <div className="small text-muted">por sesión</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -369,6 +365,7 @@
       );
     }
 
+    /* SERVICIOS */
     function ServiciosSection() {
       const servicios = [
         {
@@ -415,8 +412,8 @@
             <div className="text-center mb-5">
               <h2 className="section-title">Servicios de masajes</h2>
               <p className="section-subtitle mt-2">
-                Diseñamos cada experiencia para acompañar tu descanso en el
-                hotel y ayudarte a recuperar energía de forma natural.
+                Cada masaje está diseñado para complementar tu experiencia en
+                el Hotel Lodge El Morado y ayudarte a recuperar energía de forma natural.
               </p>
             </div>
 
@@ -444,9 +441,9 @@
                       </ul>
                       <div className="mt-auto d-flex justify-content-between align-items-center">
                         <span className="price-tag">{servicio.precio}</span>
-                        <button className="btn btn-sm btn-outline-secondary rounded-pill">
-                          Más info
-                        </button>
+                        <span className="small text-muted">
+                          Reserva online desde el botón superior.
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -458,72 +455,17 @@
       );
     }
 
-    function BeneficiosSection() {
-      const beneficios = [
-        {
-          icono: "🏨",
-          titulo: "Dentro del hotel",
-          texto: "El huésped no necesita desplazarse: llevamos la experiencia de spa directamente a su estadía."
-        },
-        {
-          icono: "📅",
-          titulo: "Agenda automatizada",
-          texto: "Compatible con sistemas de reserva online (SimplyBook.me) mediante link o código QR."
-        },
-        {
-          icono: "🤝",
-          titulo: "Experiencia confiable",
-          texto: "Masajistas certificadas y protocolos de higiene y seguridad para cada sesión."
-        }
-      ];
-
-      return (
-        <section id="beneficios" className="py-5 bg-white">
-          <div className="container">
-            <div className="row align-items-center g-4">
-              <div className="col-lg-5">
-                <h2 className="section-title mb-3">
-                  Un plus de bienestar para tus huéspedes
-                </h2>
-                <p className="text-muted">
-                  SPA Anka Bienestar Integral se integra a la experiencia del
-                  hotel como un servicio de valor agregado, ayudando a mejorar
-                  la satisfacción de los huéspedes y las valoraciones en línea.
-                </p>
-                <p className="text-muted">
-                  Ideal para turistas, ejecutivos y familias que buscan un
-                  momento de pausa, distensión y autocuidado.
-                </p>
-              </div>
-              <div className="col-lg-7">
-                <div className="row g-3">
-                  {beneficios.map((b) => (
-                    <div key={b.titulo} className="col-md-4">
-                      <div className="p-3 border rounded-4 h-100 bg-light">
-                        <div className="benefit-icon mb-2">{b.icono}</div>
-                        <h6 className="fw-semibold">{b.titulo}</h6>
-                        <p className="small text-muted mb-0">{b.texto}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* 🔧 ContactSection AHORA USA FORMSUBMIT */
+    /* CONTACTO (solo contacto, no reservas) */
     function ContactSection() {
       return (
         <section id="contacto" className="py-5 py-lg-6">
           <div className="container">
             <div className="text-center mb-4">
-              <h2 className="section-title">Contacto y reservas</h2>
+              <h2 className="section-title">Contacto</h2>
               <p className="section-subtitle">
-                Si eres hotel o deseas más información sobre nuestros servicios
-                de masajes, completa el formulario o escríbenos directamente.
+                Si eres hotel, lodge o deseas más información sobre nuestros servicios
+                de masajes, completa el siguiente formulario.  
+                Para reservar tu masaje, utiliza el botón “Reserva tu masaje”.
               </p>
             </div>
 
@@ -531,29 +473,28 @@
               <div className="row g-0">
                 <div className="col-lg-5 contact-side p-4 p-lg-5">
                   <span className="badge-soft mb-2">
-                    Próximamente: reservas online con SimplyBook.me
+                    Servicio para hoteles y lodges de montaña
                   </span>
-                  <h3 className="mb-3">Integra SPA Anka a tu hotel</h3>
+                  <h3 className="mb-3">Integra SPA Anka a tu alojamiento</h3>
                   <p className="mb-4">
-                    Creamos una agenda de masajes a medida de tus horarios y
-                    ocupación. Tus huéspedes podrán reservar escaneando un
-                    código QR o desde un link personalizado.
+                    Diseñamos una agenda de masajes a medida de tus horarios
+                    y ocupación. Tus huéspedes podrán reservar en línea de forma simple,
+                    aumentando su satisfacción y la valoración de su estadía.
                   </p>
                   <ul className="list-unstyled small">
-                    <li className="mb-2">✔ Configuración de agenda por bloque horario</li>
                     <li className="mb-2">✔ Masajes en habitación o sala designada</li>
-                    <li className="mb-2">✔ Reporte básico de sesiones realizadas</li>
+                    <li className="mb-2">✔ Agenda online con SimplyBook.me</li>
+                    <li className="mb-2">✔ Equipo de masajistas certificadas</li>
                   </ul>
-                  <p className="small mt-4 mb-1">Correo de contacto:</p>
-                  <p className="fw-semibold">contacto@spaanka.cl</p>
+                  <p className="small mt-4 mb-1">Correo directo:</p>
+                  <p className="fw-semibold">serviciosdemasajeintegral@gmail.com</p>
                 </div>
 
                 <div className="col-lg-7 p-4 p-lg-5 bg-white">
                   <h5 className="fw-semibold mb-3">
-                    Envíanos un mensaje para coordinar una visita o propuesta
+                    Envíanos un mensaje para coordinar una propuesta o visita
                   </h5>
 
-                  {/* Formulario con FormSubmit */}
                   <form
                     action="https://formsubmit.co/serviciosdemasajeintegral@gmail.com"
                     method="POST"
@@ -564,12 +505,9 @@
                     <input
                       type="hidden"
                       name="_subject"
-                      value="Nuevo contacto desde SPA Anka Bienestar Integral"
+                      value="Nuevo contacto desde sitio SPA Anka Bienestar Integral"
                     />
                     <input type="hidden" name="_template" value="table" />
-                    {/* Si más adelante tienes una página de gracias, puedes usar:
-                    <input type="hidden" name="_next" value="https://tudominio.cl/gracias.html" />
-                    */}
 
                     <div className="col-md-6">
                       <label className="form-label" htmlFor="nombre">
@@ -584,6 +522,7 @@
                         required
                       />
                     </div>
+
                     <div className="col-md-6">
                       <label className="form-label" htmlFor="email">
                         Correo electrónico
@@ -597,26 +536,27 @@
                         required
                       />
                     </div>
+
                     <div className="col-12">
                       <label className="form-label" htmlFor="mensaje">
-                        Mensaje (indica si eres hotel, lodge, etc.)
+                        Mensaje
                       </label>
                       <textarea
                         className="form-control"
                         rows="4"
                         id="mensaje"
                         name="mensaje"
-                        placeholder="Cuéntanos qué tipo de servicio buscas y en qué ciudad estás."
+                        placeholder="Cuéntanos si eres hotel, lodge u otro, y qué tipo de servicio te interesa."
                         required
                       ></textarea>
                     </div>
+
                     <div className="col-12 d-flex justify-content-between align-items-center">
                       <button type="submit" className="btn btn-anka-primary">
                         Enviar mensaje
                       </button>
                       <span className="small text-muted">
-                        El mensaje será enviado directamente a nuestro correo
-                        para coordinar contigo.
+                        Tu consulta llegará directamente a nuestro correo.
                       </span>
                     </div>
                   </form>
@@ -628,13 +568,14 @@
       );
     }
 
+    /* FOOTER */
     function Footer() {
       return (
         <footer className="py-3 mt-5">
           <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
             <span>© {new Date().getFullYear()} SPA Anka Bienestar Integral</span>
             <span className="small">
-              Sitio demostrativo · Desarrollado en React + Bootstrap
+              Sitio informativo · Reservas gestionadas vía SimplyBook.me
             </span>
           </div>
         </footer>
@@ -648,7 +589,6 @@
           <main>
             <HeroSection />
             <ServiciosSection />
-            <BeneficiosSection />
             <ContactSection />
           </main>
           <Footer />
