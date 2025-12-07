@@ -164,18 +164,6 @@
       color: var(--anka-dark);
     }
 
-    /* BENEFICIOS */
-    .benefit-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(90, 154, 168, 0.12);
-      font-size: 1.4rem;
-    }
-
     /* CONTACTO */
     .contact-card {
       border-radius: 1.5rem;
@@ -229,7 +217,6 @@
   </style>
 </head>
 <body>
-  <!-- Contenedor raíz de React -->
   <div id="root"></div>
 
   <!-- React + ReactDOM + Babel -->
@@ -240,7 +227,6 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Código React -->
   <script type="text/babel">
     /* NAVBAR */
     function Navbar() {
@@ -455,7 +441,7 @@
       );
     }
 
-    /* CONTACTO (solo contacto, no reservas) */
+    /* CONTACTO (solo contacto) */
     function ContactSection() {
       return (
         <section id="contacto" className="py-5 py-lg-6">
@@ -500,7 +486,6 @@
                     method="POST"
                     className="row g-3"
                   >
-                    {/* Configuración FormSubmit */}
                     <input type="hidden" name="_captcha" value="false" />
                     <input
                       type="hidden"
@@ -568,7 +553,6 @@
       );
     }
 
-    /* FOOTER */
     function Footer() {
       return (
         <footer className="py-3 mt-5">
