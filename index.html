@@ -4,31 +4,26 @@
   <meta charset="UTF-8" />
   <title>SPA Anka Bienestar Integral</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Masajes relajantes, descontracturantes y piedras calientes en el Cajón del Maipo. Reserva online tu experiencia de bienestar con Anka Bienestar Integral.">
+  <meta name="description" content="Masajes relajantes, descontracturantes y piedras calientes en el Cajón del Maipo. Reserva online tu experiencia de bienestar con Anka Bienestar Integral.">
+  <meta name="keywords" content="spa cajón del maipo, masajes cajón del maipo, spa montaña, piedras calientes, masajes relajantes">
+  <meta name="robots" content="index, follow">
 
-<meta name="keywords" content="spa cajón del maipo, masajes cajón del maipo, spa montaña, piedras calientes, masajes relajantes">
-
-<meta name="robots" content="index, follow">
   <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
-  <!-- Google Fonts (estilo lujo / editorial) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Paleta sobria / wellness */
-      --anka-ink: #0f2c2f;        /* verde profundo */
+      --anka-ink: #0f2c2f;
       --anka-ink-2: #14373a;
-      --anka-sand: #f3efe7;       /* arena */
-      --anka-mist: #f6f8f7;       /* blanco suave */
-      --anka-sage: #7a9a8f;       /* salvia */
-      --anka-gold: #c7b08a;       /* dorado tenue */
+      --anka-sand: #f3efe7;
+      --anka-mist: #f6f8f7;
+      --anka-sage: #7a9a8f;
+      --anka-gold: #c7b08a;
       --anka-line: rgba(15,44,47,.12);
       --anka-shadow: 0 22px 60px rgba(0,0,0,.10);
     }
@@ -40,12 +35,12 @@
       letter-spacing: .01em;
     }
 
-    /* TIPOGRAFÍA */
     .display-serif{
       font-family: "Cormorant Garamond", serif;
       letter-spacing: .01em;
       color: var(--anka-ink);
     }
+
     .kicker{
       text-transform: uppercase;
       letter-spacing: .18em;
@@ -53,34 +48,38 @@
       color: rgba(15,44,47,.70);
     }
 
-    /* NAVBAR: transparente sobre hero, sólida al hacer scroll */
     .navbar{
       transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
       border-bottom: 1px solid rgba(255,255,255,.10);
       background: rgba(15,44,47,.08);
       backdrop-filter: blur(10px);
     }
+
     .navbar.scrolled{
       background: rgba(246,248,247,.92);
       border-bottom: 1px solid var(--anka-line);
       box-shadow: 0 12px 30px rgba(0,0,0,.06);
     }
+
     .navbar-brand{
       font-weight: 600;
       letter-spacing: .06em;
       text-transform: uppercase;
       font-size: .95rem;
     }
+
     .navbar .nav-link{
       color: rgba(255,255,255,.86) !important;
       font-size: .95rem;
     }
-    .navbar.scrolled .nav-link{
+
+    .navbar.scrolled .nav-link,
+    .navbar.scrolled .navbar-brand{
       color: rgba(15,44,47,.82) !important;
     }
+
     .navbar .nav-link:hover{ opacity: 1; }
 
-    /* HERO (video full-bleed) */
     .hero{
       position: relative;
       min-height: 92vh;
@@ -160,12 +159,14 @@
       backdrop-filter: blur(10px);
       transition: transform .18s ease, background .18s ease, border-color .18s ease;
     }
+
     .btn-anka-primary:hover{
       transform: translateY(-1px);
       background: rgba(255,255,255,.18);
       border-color: rgba(255,255,255,.44);
       color:#fff;
     }
+
     .btn-anka-solid{
       border-radius: 999px;
       padding: .85rem 1.55rem;
@@ -175,6 +176,7 @@
       font-weight: 700;
       box-shadow: 0 18px 45px rgba(199,176,138,.35);
     }
+
     .btn-anka-solid:hover{ opacity:.95; color: var(--anka-ink); }
 
     .hero-card{
@@ -187,14 +189,13 @@
       box-shadow: var(--anka-shadow);
     }
 
-    /* SECCIONES */
-    .section{
-      padding: 4.5rem 0;
-    }
+    .section{ padding: 4.5rem 0; }
+
     .section-header{
       margin-bottom: 2.25rem;
       text-align: center;
     }
+
     .section-header .subtitle{
       max-width: 720px;
       margin: .75rem auto 0;
@@ -202,7 +203,6 @@
       line-height: 1.8;
     }
 
-    /* Cards minimalistas */
     .service-card{
       border: 1px solid var(--anka-line);
       border-radius: 1.2rem;
@@ -211,16 +211,19 @@
       transition: transform .18s ease, box-shadow .18s ease;
       box-shadow: 0 14px 40px rgba(0,0,0,.06);
     }
+
     .service-card:hover{
       transform: translateY(-4px);
       box-shadow: 0 22px 55px rgba(0,0,0,.10);
     }
+
     .service-thumb{
       height: 150px;
       background: linear-gradient(145deg, rgba(122,154,143,.18), rgba(199,176,138,.18));
       border-bottom: 1px solid var(--anka-line);
       position: relative;
     }
+
     .service-thumb span{
       position:absolute;
       bottom: .9rem;
@@ -228,6 +231,7 @@
       font-size: 2rem;
       filter: drop-shadow(0 10px 22px rgba(0,0,0,.12));
     }
+
     .chip{
       display:inline-flex;
       align-items:center;
@@ -239,17 +243,18 @@
       color: rgba(15,44,47,.72);
       background: rgba(243,239,231,.45);
     }
+
     .price{
       font-weight: 700;
       color: var(--anka-ink);
     }
 
-    /* Sección editorial (imágenes) */
     .editorial{
       background: linear-gradient(180deg, rgba(243,239,231,.62), rgba(246,248,247,1));
       border-top: 1px solid var(--anka-line);
       border-bottom: 1px solid var(--anka-line);
     }
+
     .img-card{
       border-radius: 1.25rem;
       overflow: hidden;
@@ -257,17 +262,16 @@
       box-shadow: 0 18px 50px rgba(0,0,0,.08);
       background: #fff;
     }
+
     .img-card img{
       width:100%;
       height: 280px;
       object-fit: cover;
       display:block;
     }
-    .img-caption{
-      padding: 1.1rem 1.2rem;
-    }
 
-    /* Testimonios */
+    .img-caption{ padding: 1.1rem 1.2rem; }
+
     .quote{
       border: 1px solid var(--anka-line);
       border-radius: 1.25rem;
@@ -276,7 +280,6 @@
       box-shadow: 0 14px 40px rgba(0,0,0,.06);
     }
 
-    /* CONTACTO + RESERVAS */
     .contact-wrap{
       border: 1px solid var(--anka-line);
       border-radius: 1.6rem;
@@ -284,30 +287,34 @@
       background: #fff;
       box-shadow: 0 22px 60px rgba(0,0,0,.10);
     }
+
     .contact-side{
       background: linear-gradient(145deg, rgba(15,44,47,.95), rgba(122,154,143,.85));
       color: rgba(255,255,255,.92);
       padding: 2.25rem;
     }
+
     .contact-side .mini{
       color: rgba(255,255,255,.78);
       line-height: 1.8;
     }
+
     .contact-main{
       padding: 2.25rem;
       background: #fff;
     }
+
     .form-control, .form-select{
       border-radius: .9rem;
       border-color: rgba(15,44,47,.14);
       padding: .85rem 1rem;
     }
+
     .form-control:focus{
       border-color: rgba(122,154,143,.55);
       box-shadow: 0 0 0 .25rem rgba(122,154,143,.18);
     }
 
-    /* FOOTER */
     footer{
       background: var(--anka-ink);
       color: rgba(255,255,255,.76);
@@ -326,498 +333,421 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#inicio">
+        SPA ANKA <span class="fw-light">Bienestar Integral</span>
+      </a>
 
-  <!-- React + ReactDOM + Babel -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarAnka"
+        aria-controls="navbarAnka"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarAnka">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto & Reservas</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-anka-solid" href="https://spaanka3.simplybook.me/v2/" target="_blank" rel="noopener noreferrer">Reservar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header id="inicio" class="hero">
+      <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2000&q=80">
+        <source src="https://cdn.coverr.co/videos/coverr-woman-getting-a-massage-7056/1080p.mp4" type="video/mp4" />
+      </video>
+
+      <div class="container hero-content">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <span class="hero-badge">
+              <span>🌿</span>
+              <span>Wellness & Masajes · Lodge & Hotel</span>
+            </span>
+
+            <h1 class="hero-title display-serif">
+              Masajes relajantes, descontracturantes y con piedras calientes en plena montaña.
+            </h1>
+
+            <p class="hero-lead">
+              Vive una experiencia de bienestar única con <strong>Anka Bienestar Integral</strong>.
+            </p>
+
+            <p class="hero-lead">
+              Masajes profesionales: descontracturante, relajante, piedras calientes,
+              reflexología y más. Reserva simple y rápida, en la comodidad de tu alojamiento.
+            </p>
+
+            <p class="hero-lead">
+              Sábados y domingos la atención se realiza en Cajón del Maipo, Vitamonti.
+              De lunes a viernes en Santiago.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a class="btn btn-anka-solid" href="https://spaanka3.simplybook.me/v2/" target="_blank" rel="noopener noreferrer">
+                Reserva tu masaje
+              </a>
+              <a class="btn btn-anka-primary" href="#servicios">Ver servicios</a>
+            </div>
+
+            <div class="mt-4 d-flex flex-wrap gap-2">
+              <span class="chip">⏱ Sesiones 30–60 min</span>
+              <span class="chip">👥 1 o 2 personas simultáneo</span>
+              <span class="chip">📍 Atención en Lodge / Hotel</span>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-card">
+              <div class="kicker mb-2">Selección de tratamientos</div>
+              <h4 class="display-serif mb-3" style="color:var(--anka-ink)">Tu momento empieza aquí</h4>
+
+              <div class="d-grid gap-3">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <div class="fw-semibold">Piedras calientes</div>
+                    <div class="small text-muted">Calor profundo · relajación muscular</div>
+                  </div>
+                  <span class="chip">60 min</span>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <div class="fw-semibold">Descontracturante</div>
+                    <div class="small text-muted">Espalda · cuello · hombros</div>
+                  </div>
+                  <span class="chip">45–60 min</span>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <div class="fw-semibold">Relajante</div>
+                    <div class="small text-muted">Maniobras suaves · desconexión total</div>
+                  </div>
+                  <span class="chip">60 min</span>
+                </div>
+              </div>
+
+              <hr style="border-color:var(--anka-line)" />
+
+              <p class="small text-muted mb-0">
+                Reservas se gestionan en SimplyBook.me. Para consultas o convenios con lodges/hoteles,
+                usa “Contacto & Reservas”.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="servicios" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="kicker">Treatments</div>
+          <h2 class="display-serif mt-2" style="font-size:2.6rem">Servicios de masajes</h2>
+          <p class="subtitle">
+            Diseñados para complementar tu estadía y ayudarte a recuperar energía con una experiencia
+            sobria, natural y profundamente relajante.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card h-100">
+              <div class="service-thumb"><span>🌋</span></div>
+              <div class="p-4 d-flex flex-column h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip">⏱ 60 min</span>
+                  <span class="chip">👥 1–2</span>
+                </div>
+                <h5 class="display-serif mb-2" style="font-size:1.55rem">Masaje con piedras calientes</h5>
+                <p class="small text-muted" style="line-height:1.75">Piedras volcánicas tibias aplicadas en puntos clave para relajar profundamente y mejorar la circulación.</p>
+                <ul class="small mb-3" style="color:rgba(15,44,47,.76)">
+                  <li>Relajación profunda</li>
+                  <li>Mejora circulación</li>
+                  <li>Reduce estrés</li>
+                </ul>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$XX.XXX CLP</span>
+                  <a class="small text-decoration-none" href="https://spaanka3.simplybook.me/v2/" target="_blank" rel="noopener noreferrer" style="color:var(--anka-sage)">Reservar ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card h-100">
+              <div class="service-thumb"><span>💪</span></div>
+              <div class="p-4 d-flex flex-column h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip">⏱ 45–60 min</span>
+                  <span class="chip">👥 1–2</span>
+                </div>
+                <h5 class="display-serif mb-2" style="font-size:1.55rem">Masaje descontracturante</h5>
+                <p class="small text-muted" style="line-height:1.75">Técnica focalizada en liberar tensiones y nudos musculares, ideal para espalda, cuello y hombros.</p>
+                <ul class="small mb-3" style="color:rgba(15,44,47,.76)">
+                  <li>Alivia tensión</li>
+                  <li>Libera puntos gatillo</li>
+                  <li>Mejora movilidad</li>
+                </ul>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$XX.XXX CLP</span>
+                  <a class="small text-decoration-none" href="https://spaanka3.simplybook.me/v2/" target="_blank" rel="noopener noreferrer" style="color:var(--anka-sage)">Reservar ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card h-100">
+              <div class="service-thumb"><span>🌿</span></div>
+              <div class="p-4 d-flex flex-column h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip">⏱ 60 min</span>
+                  <span class="chip">👥 1–2</span>
+                </div>
+                <h5 class="display-serif mb-2" style="font-size:1.55rem">Masaje relajante</h5>
+                <p class="small text-muted" style="line-height:1.75">Maniobras suaves y continuas de cuerpo completo para calmar sistema nervioso y favorecer el descanso.</p>
+                <ul class="small mb-3" style="color:rgba(15,44,47,.76)">
+                  <li>Reduce ansiedad</li>
+                  <li>Mejora el sueño</li>
+                  <li>Sensación de calma</li>
+                </ul>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$XX.XXX CLP</span>
+                  <a class="small text-decoration-none" href="https://spaanka3.simplybook.me/v2/" target="_blank" rel="noopener noreferrer" style="color:var(--anka-sage)">Reservar ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card h-100">
+              <div class="service-thumb"><span>🦶</span></div>
+              <div class="p-4 d-flex flex-column h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="chip">⏱ 30–40 min</span>
+                  <span class="chip">👥 1–2</span>
+                </div>
+                <h5 class="display-serif mb-2" style="font-size:1.55rem">Reflexología podal</h5>
+                <p class="small text-muted" style="line-height:1.75">Estimulación de puntos reflejos en los pies para apoyar el equilibrio corporal y una sensación de ligereza.</p>
+                <ul class="small mb-3" style="color:rgba(15,44,47,.76)">
+                  <li>Descanso profundo</li>
+                  <li>Relajación general</li>
+                  <li>Sensación de liviandad</li>
+                </ul>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$XX.XXX CLP</span>
+                  <a class="small text-decoration-none" href="https://spaanka3.simplybook.me/v2/" target="_blank" rel="noopener noreferrer" style="color:var(--anka-sage)">Reservar ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section editorial">
+      <div class="container">
+        <div class="section-header">
+          <div class="kicker">Experience</div>
+          <h2 class="display-serif mt-2" style="font-size:2.6rem">Una experiencia sobria y premium</h2>
+          <p class="subtitle">
+            Inspirado en los grandes retiros de bienestar: estética minimal, atención cuidadosa y foco en resultados.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="img-card h-100">
+              <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=2000&q=80" alt="Ritual de calma" />
+              <div class="img-caption">
+                <h5 class="display-serif mb-2" style="font-size:1.7rem">Ritual de calma</h5>
+                <p class="mb-0 text-muted" style="line-height:1.8">Un inicio suave, respiración y enfoque en desconectar del ritmo diario.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="img-card h-100">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=80" alt="Técnica y cuidado" />
+              <div class="img-caption">
+                <h5 class="display-serif mb-2" style="font-size:1.7rem">Técnica y cuidado</h5>
+                <p class="mb-0 text-muted" style="line-height:1.8">Maniobras profesionales adaptadas a tu objetivo: relajar, aliviar o recuperar.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="img-card h-100">
+              <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=80" alt="Entorno natural" />
+              <div class="img-caption">
+                <h5 class="display-serif mb-2" style="font-size:1.7rem">Entorno natural</h5>
+                <p class="mb-0 text-muted" style="line-height:1.8">La montaña como escenario para resetear energía y volver a lo esencial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5 g-4">
+          <div class="col-lg-6">
+            <div class="quote">
+              <div class="kicker mb-2">Testimonio</div>
+              <p class="mb-2" style="line-height:1.9">
+                “Una pausa real. El masaje descontracturante me dejó como nuevo después de trekking.
+                Se nota profesionalismo y cuidado en cada detalle.”
+              </p>
+              <div class="small text-muted">— Huésped (referencia)</div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="quote">
+              <div class="kicker mb-2">Para parejas</div>
+              <p class="mb-2" style="line-height:1.9">
+                Atención para <strong>1 persona o 2 en forma simultánea</strong> (según disponibilidad),
+                ideal para parejas o amigos que quieran vivir la experiencia juntos.
+              </p>
+              <div class="small text-muted">— Consulta por horarios disponibles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="kicker">Contact</div>
+          <h2 class="display-serif mt-2" style="font-size:2.6rem">Contacto & Reservas</h2>
+          <p class="subtitle">
+            Para reservar, usa SimplyBook. Para convenios con lodges/hoteles o consultas,
+            escríbenos por el formulario.
+          </p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="row g-0">
+            <div class="col-lg-5 contact-side">
+              <div class="kicker text-white-50">Reservas</div>
+              <h3 class="display-serif mt-2 mb-3" style="color:#fff;font-size:2.2rem">Reserva en línea</h3>
+              <p class="mini mb-4">
+                Agenda tu sesión en minutos. Si vienes en pareja, puedes reservar
+                1 o 2 personas simultáneo (según disponibilidad).
+              </p>
+
+              <div class="d-grid gap-2 mb-4">
+                <a class="btn btn-anka-solid" href="https://spaanka3.simplybook.me/v2/" target="_blank" rel="noopener noreferrer">
+                  Ir a reservas (SimplyBook)
+                </a>
+                <a class="btn btn-anka-primary" href="#servicios">Ver servicios</a>
+              </div>
+
+              <hr style="border-color:rgba(255,255,255,.18)" />
+
+              <div class="kicker text-white-50 mt-3">Contacto directo</div>
+              <div class="mt-2">
+                <div class="text-white-50 small">Correo</div>
+                <div class="fw-semibold">serviciosdemasajeintegral@gmail.com</div>
+              </div>
+
+              <div class="mt-3">
+                <div class="text-white-50 small">Ubicación</div>
+                <div class="fw-semibold">Lodge / Hotel (zona montaña)</div>
+              </div>
+            </div>
+
+            <div class="col-lg-7 contact-main">
+              <h5 class="display-serif mb-3" style="font-size:1.8rem">Envíanos un mensaje</h5>
+
+              <form action="https://formsubmit.co/serviciosdemasajeintegral@gmail.com" method="POST" class="row g-3">
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="Nuevo contacto desde SPA Anka Bienestar Integral" />
+                <input type="hidden" name="_template" value="table" />
+
+                <div class="col-md-6">
+                  <label class="form-label" for="nombre">Nombre</label>
+                  <input class="form-control" id="nombre" name="nombre" required placeholder="Tu nombre" />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label" for="email">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="nombre@ejemplo.com" />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label" for="tipo">Tipo de consulta</label>
+                  <select class="form-select" id="tipo" name="tipo">
+                    <option>Convenio Lodge / Hotel</option>
+                    <option>Consulta general</option>
+                    <option>Servicios para empresas</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label" for="telefono">Teléfono (opcional)</label>
+                  <input class="form-control" id="telefono" name="telefono" placeholder="+56 9 XXXX XXXX" />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="mensaje">Mensaje</label>
+                  <textarea class="form-control" rows="4" id="mensaje" name="mensaje" required placeholder="Cuéntanos tu necesidad (servicio, fechas, número de personas, lodge/hotel, etc.)"></textarea>
+                </div>
+
+                <div class="col-12 d-flex flex-wrap gap-2 justify-content-between align-items-center">
+                  <button type="submit" class="btn btn-anka-solid">Enviar mensaje</button>
+                  <span class="small text-muted">Tu mensaje llegará directo a nuestro correo.</span>
+                </div>
+
+                <div class="col-12">
+                  <div class="small text-muted mt-2">
+                    Si lo tuyo es reservar una hora, usa el botón <strong>“Ir a reservas (SimplyBook)”</strong>.
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div>© <span id="currentYear"></span> SPA Anka Bienestar Integral</div>
+      <div class="small">Reservas vía SimplyBook.me · Sitio informativo</div>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script type="text/babel">
-    const BOOKING_URL = "https://spaanka3.simplybook.me/v2/";
-    const EMAIL_TO = "serviciosdemasajeintegral@gmail.com";
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-    // Reemplaza por tu video e imagen
-    const HERO_VIDEO_URL = "https://cdn.coverr.co/videos/coverr-woman-getting-a-massage-7056/1080p.mp4";
-    const HERO_POSTER_URL = "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2000&q=80";
-
-    /* NAVBAR */
-    function Navbar() {
-      React.useEffect(() => {
-        const onScroll = () => {
-          const nav = document.querySelector(".navbar");
-          if (!nav) return;
-          if (window.scrollY > 40) nav.classList.add("scrolled");
-          else nav.classList.remove("scrolled");
-        };
-        onScroll();
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-      }, []);
-
-      return (
-        <nav className="navbar navbar-expand-lg fixed-top">
-          <div className="container">
-            <a className="navbar-brand text-white" href="#inicio">
-              SPA ANKA <span className="fw-light">Bienestar Integral</span>
-            </a>
-
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarAnka"
-              aria-controls="navbarAnka"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon" />
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarAnka">
-              <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                <li className="nav-item">
-                  <a className="nav-link" href="#servicios">Servicios</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#experiencia">Experiencia</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#contacto">Contacto & Reservas</a>
-                </li>
-                <li className="nav-item ms-lg-2">
-                  <a className="btn btn-anka-solid" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                    Reservar
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      );
+    function updateNavbarOnScroll() {
+      const nav = document.querySelector(".navbar");
+      if (!nav) return;
+      if (window.scrollY > 40) nav.classList.add("scrolled");
+      else nav.classList.remove("scrolled");
     }
 
-    /* HERO */
-    function HeroSection() {
-      return (
-        <header id="inicio" className="hero">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={HERO_POSTER_URL}
-          >
-            <source src={HERO_VIDEO_URL} type="video/mp4" />
-          </video>
-
-          <div className="container hero-content">
-            <div className="row g-4 align-items-center">
-              <div className="col-lg-7">
-                <span className="hero-badge">
-                  <span>🌿</span>
-                  <span>Wellness & Masajes · Lodge & Hotel</span>
-                </span>
-
-                <h1 className="hero-title display-serif">
-                  <p className="hero-lead">
-                        Masajes relajantes, descontracturantes y con piedras calientes en plena montaña.
-                        Vive una experiencia de bienestar única con <strong>Anka Bienestar Integral</strong>.
-                    </p>
-                </h1>
-
-                <p className="hero-lead">
-                  Masajes profesionales: descontracturante, relajante, piedras calientes,
-                  reflexología y más. Reserva simple y rápida, en la comodidad de tu alojamiento.
-                </p>
-
-                <p className="hero-lead">
-                  Sábados y domingos la atención se realiza en Cajón del Maipo, Vitamonti.
-                  De lunes a viernes en Santiago.
-                </p>
-
-                <div className="d-flex flex-wrap gap-2 mt-4">
-                  <a className="btn btn-anka-solid" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                    Reserva tu masaje
-                  </a>
-                  <a className="btn btn-anka-primary" href="#servicios">
-                    Ver servicios
-                  </a>
-                </div>
-
-                <div className="mt-4 d-flex flex-wrap gap-2">
-                  <span className="chip">⏱ Sesiones 30–60 min</span>
-                  <span className="chip">👥 1 o 2 personas simultáneo</span>
-                  <span className="chip">📍 Atención en Lodge / Hotel</span>
-                </div>
-              </div>
-
-              <div className="col-lg-5">
-                <div className="hero-card">
-                  <div className="kicker mb-2">Selección de tratamientos</div>
-                  <h4 className="display-serif mb-3" style={{color:"var(--anka-ink)"}}>
-                    Tu momento empieza aquí
-                  </h4>
-                  <div className="d-grid gap-3">
-                    <div className="d-flex justify-content-between align-items-start">
-                      <div>
-                        <div className="fw-semibold">Piedras calientes</div>
-                        <div className="small text-muted">Calor profundo · relajación muscular</div>
-                      </div>
-                      <span className="chip">60 min</span>
-                    </div>
-
-                    <div className="d-flex justify-content-between align-items-start">
-                      <div>
-                        <div className="fw-semibold">Descontracturante</div>
-                        <div className="small text-muted">Espalda · cuello · hombros</div>
-                      </div>
-                      <span className="chip">45–60 min</span>
-                    </div>
-
-                    <div className="d-flex justify-content-between align-items-start">
-                      <div>
-                        <div className="fw-semibold">Relajante</div>
-                        <div className="small text-muted">Maniobras suaves · desconexión total</div>
-                      </div>
-                      <span className="chip">60 min</span>
-                    </div>
-                  </div>
-
-                  <hr style={{borderColor:"var(--anka-line)"}} />
-
-                  <p className="small text-muted mb-0">
-                    Reservas se gestionan en SimplyBook.me. Para consultas o convenios con lodges/hoteles,
-                    usa “Contacto & Reservas”.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-      );
-    }
-
-    /* SERVICIOS */
-    function ServiciosSection() {
-      const servicios = [
-        {
-          nombre: "Masaje con piedras calientes",
-          icono: "🌋",
-          duracion: "60 min",
-          descripcion:
-            "Piedras volcánicas tibias aplicadas en puntos clave para relajar profundamente y mejorar la circulación.",
-          beneficios: ["Relajación profunda", "Mejora circulación", "Reduce estrés"],
-          precio: "$XX.XXX CLP"
-        },
-        {
-          nombre: "Masaje descontracturante",
-          icono: "💪",
-          duracion: "45–60 min",
-          descripcion:
-            "Técnica focalizada en liberar tensiones y nudos musculares, ideal para espalda, cuello y hombros.",
-          beneficios: ["Alivia tensión", "Libera puntos gatillo", "Mejora movilidad"],
-          precio: "$XX.XXX CLP"
-        },
-        {
-          nombre: "Masaje relajante",
-          icono: "🌿",
-          duracion: "60 min",
-          descripcion:
-            "Maniobras suaves y continuas de cuerpo completo para calmar sistema nervioso y favorecer el descanso.",
-          beneficios: ["Reduce ansiedad", "Mejora el sueño", "Sensación de calma"],
-          precio: "$XX.XXX CLP"
-        },
-        {
-          nombre: "Reflexología podal",
-          icono: "🦶",
-          duracion: "30–40 min",
-          descripcion:
-            "Estimulación de puntos reflejos en los pies para apoyar el equilibrio corporal y una sensación de ligereza.",
-          beneficios: ["Descanso profundo", "Relajación general", "Sensación de liviandad"],
-          precio: "$XX.XXX CLP"
-        }
-      ];
-
-      return (
-        <section id="servicios" className="section">
-          <div className="container">
-            <div className="section-header">
-              <div className="kicker">Treatments</div>
-              <h2 className="display-serif mt-2" style={{fontSize:"2.6rem"}}>Servicios de masajes</h2>
-              <p className="subtitle">
-                Diseñados para complementar tu estadía y ayudarte a recuperar energía con una experiencia
-                sobria, natural y profundamente relajante.
-              </p>
-            </div>
-
-            <div className="row g-4">
-              {servicios.map((s) => (
-                <div key={s.nombre} className="col-md-6 col-lg-3">
-                  <div className="service-card h-100">
-                    <div className="service-thumb">
-                      <span>{s.icono}</span>
-                    </div>
-                    <div className="p-4 d-flex flex-column h-100">
-                      <div className="d-flex justify-content-between align-items-center mb-2">
-                        <span className="chip">⏱ {s.duracion}</span>
-                        <span className="chip">👥 1–2</span>
-                      </div>
-
-                      <h5 className="display-serif mb-2" style={{fontSize:"1.55rem"}}>{s.nombre}</h5>
-                      <p className="small text-muted" style={{lineHeight:"1.75"}}>{s.descripcion}</p>
-
-                      <ul className="small mb-3" style={{color:"rgba(15,44,47,.76)"}}>
-                        {s.beneficios.map((b) => <li key={b}>{b}</li>)}
-                      </ul>
-
-                      <div className="mt-auto d-flex justify-content-between align-items-center">
-                        <span className="price">{s.precio}</span>
-                        <a className="small text-decoration-none" href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
-                           style={{color:"var(--anka-sage)"}}>
-                          Reservar ↗
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </section>
-      );
-    }
-
-    /* EXPERIENCIA (estilo editorial con imágenes) */
-    function ExperienceSection() {
-      const cards = [
-        {
-          title: "Ritual de calma",
-          text: "Un inicio suave, respiración y enfoque en desconectar del ritmo diario.",
-          img: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=2000&q=80"
-        },
-        {
-          title: "Técnica y cuidado",
-          text: "Maniobras profesionales adaptadas a tu objetivo: relajar, aliviar o recuperar.",
-          img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=80"
-        },
-        {
-          title: "Entorno natural",
-          text: "La montaña como escenario para resetear energía y volver a lo esencial.",
-          img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=80"
-        }
-      ];
-
-      return (
-        <section id="experiencia" className="section editorial">
-          <div className="container">
-            <div className="section-header">
-              <div className="kicker">Experience</div>
-              <h2 className="display-serif mt-2" style={{fontSize:"2.6rem"}}>Una experiencia sobria y premium</h2>
-              <p className="subtitle">
-                Inspirado en los grandes retiros de bienestar: estética minimal, atención cuidadosa y foco en resultados.
-              </p>
-            </div>
-
-            <div className="row g-4">
-              {cards.map((c) => (
-                <div className="col-lg-4" key={c.title}>
-                  <div className="img-card h-100">
-                    <img src={c.img} alt={c.title} />
-                    <div className="img-caption">
-                      <h5 className="display-serif mb-2" style={{fontSize:"1.7rem"}}>{c.title}</h5>
-                      <p className="mb-0 text-muted" style={{lineHeight:"1.8"}}>{c.text}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="row mt-5 g-4">
-              <div className="col-lg-6">
-                <div className="quote">
-                  <div className="kicker mb-2">Testimonio</div>
-                  <p className="mb-2" style={{lineHeight:"1.9"}}>
-                    “Una pausa real. El masaje descontracturante me dejó como nuevo después de trekking.
-                    Se nota profesionalismo y cuidado en cada detalle.”
-                  </p>
-                  <div className="small text-muted">— Huésped (referencia)</div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="quote">
-                  <div className="kicker mb-2">Para parejas</div>
-                  <p className="mb-2" style={{lineHeight:"1.9"}}>
-                    Atención para <strong>1 persona o 2 en forma simultánea</strong> (según disponibilidad),
-                    ideal para parejas o amigos que quieran vivir la experiencia juntos.
-                  </p>
-                  <div className="small text-muted">— Consulta por horarios disponibles</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-      );
-    }
-
-    /* CONTACTO + RESERVAS */
-    function ContactSection() {
-      return (
-        <section id="contacto" className="section">
-          <div className="container">
-            <div className="section-header">
-              <div className="kicker">Contact</div>
-              <h2 className="display-serif mt-2" style={{fontSize:"2.6rem"}}>Contacto & Reservas</h2>
-              <p className="subtitle">
-                Para reservar, usa SimplyBook. Para convenios con lodges/hoteles o consultas,
-                escríbenos por el formulario.
-              </p>
-            </div>
-
-            <div className="contact-wrap">
-              <div className="row g-0">
-                <div className="col-lg-5 contact-side">
-                  <div className="kicker text-white-50">Reservas</div>
-                  <h3 className="display-serif mt-2 mb-3" style={{color:"#fff", fontSize:"2.2rem"}}>
-                    Reserva en línea
-                  </h3>
-                  <p className="mini mb-4">
-                    Agenda tu sesión en minutos. Si vienes en pareja, puedes reservar
-                    1 o 2 personas simultáneo (según disponibilidad).
-                  </p>
-
-                  <div className="d-grid gap-2 mb-4">
-                    <a className="btn btn-anka-solid" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                      Ir a reservas (SimplyBook)
-                    </a>
-
-                    <a className="btn btn-anka-primary" href="#servicios">
-                      Ver servicios
-                    </a>
-                  </div>
-
-                  <hr style={{borderColor:"rgba(255,255,255,.18)"}} />
-
-                  <div className="kicker text-white-50 mt-3">Contacto directo</div>
-                  <div className="mt-2">
-                    <div className="text-white-50 small">Correo</div>
-                    <div className="fw-semibold">{EMAIL_TO}</div>
-                  </div>
-
-                  <div className="mt-3">
-                    <div className="text-white-50 small">Ubicación</div>
-                    <div className="fw-semibold">Lodge / Hotel (zona montaña)</div>
-                  </div>
-                </div>
-
-                <div className="col-lg-7 contact-main">
-                  <h5 className="display-serif mb-3" style={{fontSize:"1.8rem"}}>
-                    Envíanos un mensaje
-                  </h5>
-
-                  <form
-                    action={`https://formsubmit.co/${EMAIL_TO}`}
-                    method="POST"
-                    className="row g-3"
-                  >
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_subject" value="Nuevo contacto desde SPA Anka Bienestar Integral" />
-                    <input type="hidden" name="_template" value="table" />
-
-                    <div className="col-md-6">
-                      <label className="form-label" htmlFor="nombre">Nombre</label>
-                      <input className="form-control" id="nombre" name="nombre" required placeholder="Tu nombre" />
-                    </div>
-
-                    <div className="col-md-6">
-                      <label className="form-label" htmlFor="email">Correo electrónico</label>
-                      <input type="email" className="form-control" id="email" name="email" required placeholder="nombre@ejemplo.com" />
-                    </div>
-
-                    <div className="col-md-6">
-                      <label className="form-label" htmlFor="tipo">Tipo de consulta</label>
-                      <select className="form-select" id="tipo" name="tipo">
-                        <option>Convenio Lodge / Hotel</option>
-                        <option>Consulta general</option>
-                        <option>Servicios para empresas</option>
-                      </select>
-                    </div>
-
-                    <div className="col-md-6">
-                      <label className="form-label" htmlFor="telefono">Teléfono (opcional)</label>
-                      <input className="form-control" id="telefono" name="telefono" placeholder="+56 9 XXXX XXXX" />
-                    </div>
-
-                    <div className="col-12">
-                      <label className="form-label" htmlFor="mensaje">Mensaje</label>
-                      <textarea
-                        className="form-control"
-                        rows="4"
-                        id="mensaje"
-                        name="mensaje"
-                        required
-                        placeholder="Cuéntanos tu necesidad (servicio, fechas, número de personas, lodge/hotel, etc.)"
-                      ></textarea>
-                    </div>
-
-                    <div className="col-12 d-flex flex-wrap gap-2 justify-content-between align-items-center">
-                      <button type="submit" className="btn btn-anka-solid">
-                        Enviar mensaje
-                      </button>
-                      <span className="small text-muted">
-                        Tu mensaje llegará directo a nuestro correo.
-                      </span>
-                    </div>
-
-                    <div className="col-12">
-                      <div className="small text-muted mt-2">
-                        Si lo tuyo es reservar una hora, usa el botón <strong>“Ir a reservas (SimplyBook)”</strong>.
-                      </div>
-                    </div>
-
-                  </form>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-      );
-    }
-
-    function Footer() {
-      return (
-        <footer>
-          <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-            <div>© {new Date().getFullYear()} SPA Anka Bienestar Integral</div>
-            <div className="small">Reservas vía SimplyBook.me · Sitio informativo</div>
-          </div>
-        </footer>
-      );
-    }
-
-    function App() {
-      return (
-        <>
-          <Navbar />
-          <main>
-            <HeroSection />
-            <ServiciosSection />
-            <ExperienceSection />
-            <ContactSection />
-          </main>
-          <Footer />
-        </>
-      );
-    }
-
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(<App />);
+    updateNavbarOnScroll();
+    window.addEventListener("scroll", updateNavbarOnScroll);
   </script>
 </body>
 </html>
